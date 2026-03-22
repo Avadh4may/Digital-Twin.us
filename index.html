@@ -653,358 +653,9 @@
     .process-step { flex-direction: column; gap: 8px; }
     .wf-item { flex-direction: column; gap: 12px; }
   }
-  /* ══════════════════════════════════════════
-     PRINT STYLES — Clean, elegant, professional
-     ══════════════════════════════════════════ */
-  @media print {
-    /* ── Reset & Base ── */
-    *, *::before, *::after {
-      box-sizing: border-box !important;
-      -webkit-print-color-adjust: exact !important;
-      print-color-adjust: exact !important;
-    }
-
-    :root {
-      --cream: #ffffff;
-      --white: #ffffff;
-      --ink: #111111;
-      --ink-60: #444444;
-      --ink-30: #888888;
-      --gold: #8a6420;
-      --gold-light: #b8860b;
-      --teal: #0d4f4f;
-      --teal-light: #e0efef;
-      --border: #cccccc;
-      --section-bg: #f5f5f5;
-    }
-
-    html, body {
-      font-size: 11pt;
-      line-height: 1.6;
-      background: #fff !important;
-      color: #111 !important;
-      margin: 0; padding: 0;
-    }
-
-    /* ── Hide non-print elements ── */
-    nav, .hamburger, .mobile-menu,
-    .hero-right, .hero-buttons,
-    .tech-tabs, .btn-primary, .btn-secondary,
-    .footer-new, .screen-bar,
-    .contact-card-arrow { display: none !important; }
-
-    /* ── Page breaks ── */
-    section { page-break-inside: avoid; }
-    h1, h2, h3 { page-break-after: avoid; }
-    .process-step, .fw-card, .wf-item,
-    .tech-panel, .metric-row { page-break-inside: avoid; }
-
-    /* ── Page setup ── */
-    @page {
-      size: A4;
-      margin: 18mm 16mm 18mm 16mm;
-    }
-    @page :first {
-      margin-top: 10mm;
-    }
-
-    /* ── Print header on each page ── */
-    .print-header {
-      display: flex !important;
-      align-items: center; justify-content: space-between;
-      border-bottom: 2pt solid #0d4f4f;
-      padding-bottom: 8pt;
-      margin-bottom: 16pt;
-    }
-    .print-header-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 13pt; font-weight: 700; color: #0d4f4f;
-    }
-    .print-header-name span { color: #8a6420; }
-    .print-header-url {
-      font-family: 'DM Mono', monospace;
-      font-size: 8pt; color: #888;
-    }
-
-    /* ── Hero ── */
-    .hero {
-      display: block !important;
-      min-height: auto !important;
-      padding: 0 0 24pt 0 !important;
-      border-bottom: 1pt solid #ddd;
-      margin-bottom: 24pt;
-    }
-    .hero-left { padding: 0 !important; }
-    .hero-eyebrow {
-      font-size: 7pt !important;
-      color: #8a6420 !important;
-      margin-bottom: 10pt !important;
-    }
-    .hero-eyebrow::before { background: #8a6420 !important; }
-    h1 {
-      font-size: 26pt !important;
-      color: #111 !important;
-      margin-bottom: 12pt !important;
-      line-height: 1.15 !important;
-    }
-    h1 em { color: #0d4f4f !important; }
-    .hero-desc {
-      font-size: 10.5pt !important;
-      color: #444 !important;
-      max-width: 100% !important;
-      margin-bottom: 0 !important;
-    }
-
-    /* ── Stats strip ── */
-    .stats-strip {
-      background: #0d4f4f !important;
-      padding: 16pt 0 !important;
-      display: grid !important;
-      grid-template-columns: repeat(4,1fr) !important;
-      gap: 0 !important;
-      margin-bottom: 0 !important;
-      border-radius: 6pt;
-    }
-    .stat-item {
-      padding: 8pt 12pt !important;
-      border-right: 1pt solid rgba(255,255,255,0.2) !important;
-      text-align: center !important;
-      border-bottom: none !important;
-    }
-    .stat-item:last-child { border-right: none !important; }
-    .stat-num {
-      font-size: 18pt !important;
-      color: #e8c87a !important;
-      display: block !important;
-    }
-    .stat-label { color: rgba(255,255,255,0.7) !important; font-size: 7pt !important; }
-
-    /* ── Sections general ── */
-    section {
-      padding: 20pt 0 !important;
-      background: #fff !important;
-    }
-    #process { background: #fff !important; }
-    #framework { background: #f8f8f8 !important; padding: 20pt 8pt !important; border-radius: 6pt; }
-    #technologies { background: #fff !important; }
-    #workshop { background: #0d4f4f !important; padding: 20pt 16pt !important; border-radius: 6pt; }
-    #results { background: #f8f8f8 !important; padding: 20pt 8pt !important; border-radius: 6pt; }
-    #conclusion { background: #fff !important; }
-    #contact { background: #fff !important; }
-
-    .section-eyebrow {
-      font-size: 7pt !important;
-      color: #8a6420 !important;
-      margin-bottom: 6pt !important;
-    }
-    .section-eyebrow::before { background: #8a6420 !important; width: 16pt !important; }
-    h2 {
-      font-size: 18pt !important;
-      color: #111 !important;
-      margin-bottom: 8pt !important;
-    }
-    .section-lead {
-      font-size: 10pt !important;
-      color: #555 !important;
-      max-width: 100% !important;
-      margin-bottom: 16pt !important;
-    }
-
-    /* ── Process section ── */
-    .process-grid {
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      gap: 24pt !important;
-    }
-    .process-step {
-      padding: 10pt 0 !important;
-      border-bottom: 0.5pt solid #ddd !important;
-      display: flex !important; gap: 12pt !important;
-    }
-    .step-num { font-size: 8pt !important; color: #888 !important; min-width: 24pt !important; }
-    .step-content h3 { font-size: 10pt !important; font-weight: 600 !important; margin-bottom: 4pt !important; }
-    .step-content p { font-size: 9pt !important; color: #555 !important; }
-    .process-visual {
-      background: #f0f7f7 !important;
-      border-radius: 6pt !important;
-      padding: 16pt !important;
-    }
-
-    /* ── Framework cards ── */
-    .framework-cards {
-      display: grid !important;
-      grid-template-columns: repeat(2,1fr) !important;
-      gap: 12pt !important;
-    }
-    .fw-card {
-      background: #fff !important;
-      border: 1pt solid #ccc !important;
-      border-radius: 6pt !important;
-      padding: 14pt !important;
-      page-break-inside: avoid !important;
-    }
-    .fw-card::before { display: none !important; }
-    .fw-icon {
-      background: #e0efef !important;
-      width: 32pt !important; height: 32pt !important;
-      margin-bottom: 10pt !important;
-    }
-    .fw-icon svg { stroke: #0d4f4f !important; }
-    .fw-card h3 { font-size: 10pt !important; margin-bottom: 5pt !important; }
-    .fw-card p { font-size: 8.5pt !important; color: #555 !important; }
-
-    /* ── Technologies ── */
-    .tech-panel { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 24pt !important; }
-    .tech-panel:not(.active) { display: none !important; }
-    .tech-content h3 { font-size: 13pt !important; margin-bottom: 8pt !important; }
-    .tech-content p { font-size: 9pt !important; color: #555 !important; margin-bottom: 8pt !important; }
-    .tech-highlights { gap: 6pt !important; }
-    .tech-highlight {
-      background: #f5f5f5 !important;
-      border-radius: 4pt !important;
-      padding: 8pt !important;
-      font-size: 8.5pt !important;
-      color: #444 !important;
-    }
-    .tech-highlight-dot { background: #0d4f4f !important; }
-    .tech-visual { background: #f0f7f7 !important; border-radius: 6pt !important; padding: 16pt !important; }
-
-    /* ── Workshop (dark section) ── */
-    #workshop h2 { color: #fff !important; }
-    #workshop .section-lead { color: rgba(255,255,255,0.7) !important; }
-    .workshop-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 24pt !important; }
-    .wf-item {
-      background: rgba(255,255,255,0.08) !important;
-      border: 0.5pt solid rgba(255,255,255,0.15) !important;
-      border-radius: 5pt !important;
-      padding: 12pt !important;
-    }
-    .wf-num { color: #e8c87a !important; font-size: 7pt !important; }
-    .wf-item h4 { color: #fff !important; font-size: 9.5pt !important; margin-bottom: 4pt !important; }
-    .wf-item p { color: rgba(255,255,255,0.6) !important; font-size: 8.5pt !important; }
-    .workshop-screen {
-      background: rgba(255,255,255,0.05) !important;
-      border: 0.5pt solid rgba(255,255,255,0.15) !important;
-      border-radius: 8pt !important;
-    }
-    .screen-body { padding: 16pt !important; }
-
-    /* ── Results ── */
-    .results-grid {
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      gap: 16pt !important;
-    }
-    .results-chart, .results-table-wrap {
-      background: #fff !important;
-      border: 1pt solid #ddd !important;
-      border-radius: 6pt !important;
-      padding: 16pt !important;
-    }
-    .results-chart h4, .results-table-wrap h4 {
-      font-size: 8pt !important;
-      color: #888 !important;
-      margin-bottom: 12pt !important;
-    }
-    .metric-bar-wrap { background: #e5e5e5 !important; }
-    .metric-bar { print-color-adjust: exact !important; }
-    .metric-label { font-size: 9pt !important; }
-    .metric-val { font-size: 8pt !important; }
-    thead th { font-size: 7.5pt !important; color: #888 !important; border-bottom: 1.5pt solid #ccc !important; }
-    tbody td { font-size: 9pt !important; border-bottom: 0.5pt solid #eee !important; padding: 8pt 8pt !important; }
-    .badge-green { background: #d4edda !important; color: #0d4f4f !important; }
-    .improvement-box {
-      background: #0d4f4f !important;
-      border-radius: 6pt !important;
-      padding: 16pt !important;
-      grid-column: 1 / -1 !important;
-    }
-    .improvement-box h4 { color: rgba(255,255,255,0.6) !important; font-size: 8pt !important; }
-    .improvement-stats { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 16pt !important; }
-    .imp-before { color: rgba(255,255,255,0.5) !important; font-size: 9pt !important; }
-    .imp-arrow { color: #e8c87a !important; font-size: 14pt !important; }
-    .imp-after { color: #fff !important; font-size: 18pt !important; }
-    .imp-desc { color: rgba(255,255,255,0.6) !important; font-size: 8pt !important; }
-
-    /* ── Creator banner ── */
-    .creator-banner {
-      background: #0d4f4f !important;
-      border-radius: 8pt !important;
-      padding: 20pt !important;
-      margin-bottom: 20pt !important;
-    }
-    .creator-banner::before, .creator-banner::after { display: none !important; }
-    .creator-badge {
-      background: rgba(200,151,58,0.2) !important;
-      border: 0.5pt solid #8a6420 !important;
-      color: #e8c87a !important;
-      font-size: 7pt !important;
-      padding: 4pt 10pt !important;
-    }
-    .creator-title { color: #fff !important; font-size: 14pt !important; }
-    .creator-title span { color: #e8c87a !important; }
-    .creator-desc { color: rgba(255,255,255,0.75) !important; font-size: 9.5pt !important; }
-
-    /* ── Conclusion ── */
-    .conclusion-text p { font-size: 9.5pt !important; color: #444 !important; margin-bottom: 10pt !important; }
-    .future-list { gap: 8pt !important; }
-    .future-item { font-size: 9pt !important; color: #555 !important; }
-    .future-item::before { color: #8a6420 !important; }
-
-    /* ── Contact ── */
-    .contact-wrapper {
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      gap: 24pt !important;
-    }
-    .contact-intro p { font-size: 9.5pt !important; color: #555 !important; }
-    .contact-card {
-      background: #f5f5f5 !important;
-      border: 1pt solid #ddd !important;
-      border-radius: 5pt !important;
-      padding: 12pt !important;
-      margin-bottom: 8pt !important;
-      display: flex !important;
-    }
-    .contact-card::before { display: none !important; }
-    .contact-icon { background: #e0efef !important; width: 32pt !important; height: 32pt !important; }
-    .contact-icon svg { stroke: #0d4f4f !important; }
-    .contact-card-label { color: #888 !important; font-size: 7pt !important; }
-    .contact-card-value { font-size: 9.5pt !important; color: #111 !important; }
-    .contact-expertise {
-      background: #0d4f4f !important;
-      border-radius: 8pt !important;
-      padding: 16pt !important;
-    }
-    .contact-expertise h3 { color: #fff !important; font-size: 12pt !important; }
-    .contact-expertise .sub { color: rgba(255,255,255,0.5) !important; font-size: 7pt !important; }
-    .expertise-tags { gap: 6pt !important; }
-    .etag {
-      background: rgba(255,255,255,0.1) !important;
-      border: 0.5pt solid rgba(255,255,255,0.2) !important;
-      color: rgba(255,255,255,0.8) !important;
-      font-size: 7.5pt !important;
-      padding: 3pt 8pt !important;
-    }
-    .contact-expertise .divider { background: rgba(255,255,255,0.12) !important; }
-    .collab-note { color: rgba(255,255,255,0.6) !important; font-size: 8.5pt !important; }
-    .collab-note strong { color: #e8c87a !important; }
-
-    /* ── Reveal override ── */
-    .reveal { opacity: 1 !important; transform: none !important; }
-
-    /* ── SVG text ── */
-    svg text { font-family: 'DM Sans', sans-serif !important; }
-  }
 </style>
 </head>
 <body>
-
-<!-- PRINT HEADER (only shows when printing) -->
-<div class="print-header" style="display:none;">
-  <span class="print-header-name">Avadh <span>Nagaralawala</span></span>
-  <span class="print-header-url">digital-twin.us · Avadh4may@gmail.com</span>
-</div>
 
 <!-- NAV -->
 <nav>
@@ -1736,7 +1387,7 @@
       <h2>Get in Touch</h2>
       <p>This framework represents a novel contribution to intelligent process engineering — applying digital twin architecture to one of the world's most strategically important industrial processes. I welcome collaboration, technical discussion, and inquiries from researchers, engineers, and industry professionals.</p>
       <div class="contact-cards">
-        <a href="/cdn-cgi/l/email-protection#18596e797c702c757961587f75797174367b7775" class="contact-card">
+        <a href="mailto:Avadh4may@gmail.com" class="contact-card">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2"/>
@@ -1745,7 +1396,7 @@
           </div>
           <div class="contact-card-text">
             <span class="contact-card-label">Email</span>
-            <span class="contact-card-value"><span class="__cf_email__" data-cfemail="67261106030f530a061e27000a060e0b4904080a">[email&#160;protected]</span></span>
+            <span class="contact-card-value">Avadh4may@gmail.com</span>
           </div>
           <span class="contact-card-arrow">→</span>
         </a>
@@ -1820,7 +1471,7 @@
     <div class="footer-col">
       <h5>Connect</h5>
       <ul>
-        <li><a href="/cdn-cgi/l/email-protection#4f0e392e2b277b222e360f28222e2623612c2022">Email</a></li>
+        <li><a href="mailto:Avadh4may@gmail.com">Email</a></li>
         <li><a href="https://www.linkedin.com/in/avadh4may/" target="_blank">LinkedIn</a></li>
         <li><a href="#contact">Get in Touch</a></li>
       </ul>
@@ -1829,7 +1480,7 @@
   <div class="footer-bottom">
     <p>© 2025 Avadh Nagaralawala · digital-twin.us · All rights reserved.</p>
     <div class="footer-socials">
-      <a href="/cdn-cgi/l/email-protection#0f4e796e6b673b626e764f68626e6663216c6062" class="footer-social-btn" title="Email">
+      <a href="mailto:Avadh4may@gmail.com" class="footer-social-btn" title="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="4" width="20" height="16" rx="2"/>
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
@@ -1845,7 +1496,7 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // Hamburger menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
@@ -1874,4 +1525,15 @@
 
   // Animate bars on visibility
   const barObs = new IntersectionObserver((entries) => {
-    
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.metric-bar').forEach(b => {
+          b.style.width = b.dataset.width + '%';
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.results-chart').forEach(el => barObs.observe(el));
+</script>
+</body>
+</html>
