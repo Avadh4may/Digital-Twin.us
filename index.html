@@ -7,17 +7,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --cream: #f2f4f8;
+    --cream: #f9f6f1;
     --white: #ffffff;
-    --ink: #0d1b2a;
-    --ink-60: #4a5568;
-    --ink-30: #9aa5b4;
-    --gold: #c05621;
-    --gold-light: #ed8936;
-    --teal: #1a3a5c;
-    --teal-light: #dbeafe;
-    --border: #d1dbe8;
-    --section-bg: #eaf0f7;
+    --ink: #1a1a1a;
+    --ink-60: #666666;
+    --ink-30: #b0a99f;
+    --gold: #c8973a;
+    --gold-light: #e8c87a;
+    --teal: #1d6a6a;
+    --teal-light: #e8f4f4;
+    --border: #e0d9d0;
+    --section-bg: #f4f0eb;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +36,7 @@
   /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-    background: rgba(242,244,248,0.95);
+    background: rgba(249,246,241,0.95);
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--border);
     padding: 0 48px;
@@ -337,7 +337,7 @@
   tbody td { padding: 14px 12px; font-size: 0.88rem; border-bottom: 1px solid var(--border); }
   tbody tr:last-child td { border-bottom: none; }
   .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 0.72rem; font-weight: 500; }
-  .badge-green { background: #dbeafe; color: #1a3a5c; }
+  .badge-green { background: #e6f4f0; color: #1d6a6a; }
   .improvement-box {
     margin-top: 36px; background: var(--teal); border-radius: 8px;
     padding: 32px; color: #fff;
@@ -362,7 +362,7 @@
   }
   .future-item::before { content: '→'; color: var(--gold); flex-shrink: 0; font-weight: 600; }
   .creator-banner {
-    background: linear-gradient(135deg, var(--teal) 0%, #0a2240 100%);
+    background: linear-gradient(135deg, var(--teal) 0%, #0f4040 100%);
     border-radius: 12px;
     padding: 56px 64px;
     margin-bottom: 64px;
@@ -457,7 +457,7 @@
   .mobile-menu {
     display: none; position: fixed;
     top: 64px; left: 0; right: 0; bottom: 0;
-    background: rgba(242,244,248,0.98);
+    background: rgba(249,246,241,0.98);
     backdrop-filter: blur(12px);
     z-index: 99; flex-direction: column;
     align-items: center; justify-content: center;
@@ -689,7 +689,7 @@
   <div class="hero-left">
     <div class="hero-eyebrow">Research & Development by Avadh Nagaralawala</div>
     <h1>Intelligent <em>Rare Earth</em> Process Systems</h1>
-    <p class="hero-desc">A first-of-its-kind digital twin framework for rare earth extraction — built from the ground up to tackle the real-world challenges that industrial engineers face every day. Real-time sensing, predictive simulation, and intelligent process control, working together in a single cohesive system.</p>
+    <p class="hero-desc">A digital twin framework built specifically for rare earth extraction — tackling the real-world challenges of nonlinear behavior, long time delays, and tightly coupled process variables. Real-time sensing, process simulation, and intelligent control working together in one system.</p>
     <div class="hero-buttons">
       <a href="#process" class="btn-primary">Explore the Research</a>
       <a href="#results" class="btn-secondary">View Results</a>
@@ -1359,15 +1359,15 @@
     <div class="creator-inner">
       <div class="creator-badge">Independent Research &amp; Engineering</div>
       <h3 class="creator-title">Conceived, Designed &amp; Developed by <span>Avadh Nagaralawala</span></h3>
-      <p class="creator-desc">Every part of this system — from the color-based soft measurement model to the improved PSO simulation engine and the case-based reasoning control strategy — was independently designed and built by Avadh Nagaralawala to solve real problems in rare earth extraction that existing tools simply couldn't handle.</p>
+      <p class="creator-desc">Every part of this system — the color-based soft measurement model, the improved PSO simulation engine, and the case-based reasoning control strategy — was independently designed and built by Avadh Nagaralawala to solve real production challenges in rare earth extraction that no existing tool addressed.</p>
     </div>
   </div>
 
   <div class="conclusion-grid reveal">
     <div class="conclusion-text">
-      <p>This framework brings together four interlocking technologies to address something the industry has struggled with for years — automating rare earth extraction processes where nonlinear behavior, long time delays, and tightly coupled variables make conventional control approaches fall short.</p>
-      <p>The result is a working cyber-physical system: soft measurement through color-based WLSSVM, a mechanism-compensation simulation engine tuned with improved PSO, case-based reasoning for control decisions, and a Unity-based virtual workshop — all validated against real plant data.</p>
-      <p>Prediction accuracy came in below 0.5% mean relative error across all three rare earth outputs (Ce, Pr, Nd), with maximum errors well within the 5% threshold used in industrial settings. The operational improvements speak for themselves.</p>
+      <p>Rare earth extraction has long been difficult to automate — nonlinear behavior, long time delays, and variables that are tightly coupled across thousands of cascade sub-processes make conventional control approaches fall short. This framework addresses all of that in one integrated system.</p>
+      <p>The four core components — color-based soft measurement via WLSSVM, mechanism-compensation simulation with improved PSO, case-based reasoning for control, and a Unity virtual workshop — were validated end-to-end against real plant data from a 60-stage extraction process.</p>
+      <p>Prediction errors came in below 0.5% mean relative error across all three rare earth outputs (Ce, Pr, Nd), with maximum errors well within the 5% industrial threshold. Inspection time dropped from 30 minutes to 5, and component detection time from 1 hour to 10 minutes.</p>
       <div class="future-list">
         <div class="future-item">Enhance soft measurement accuracy and computation speed under varying container transparency</div>
         <div class="future-item">Further improve process simulation algorithm for higher-stage extraction systems</div>
@@ -1385,9 +1385,9 @@
   <div class="contact-wrapper reveal">
     <div class="contact-intro">
       <h2>Get in Touch</h2>
-      <p>This work opens up a practical path forward for automating one of the world's most strategically important industrial processes. I'm always happy to connect — whether you're working in a related research area, exploring collaboration, or just want to dig into the technical details.</p>
+      <p>This work opens up a practical path for automating one of the world's most strategically important industrial processes. I'm always happy to connect — whether you're a researcher working in a related area, an engineer exploring collaboration, or just want to dig into the technical details.</p>
       <div class="contact-cards">
-        <a href="/cdn-cgi/l/email-protection#abeaddcacfc39fc6cad2ebccc6cac2c785c8c4c6" class="contact-card">
+        <a href="/cdn-cgi/l/email-protection#18596e797c702c757961587f75797174367b7775" class="contact-card">
           <div class="contact-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="4" width="20" height="16" rx="2"/>
@@ -1396,7 +1396,7 @@
           </div>
           <div class="contact-card-text">
             <span class="contact-card-label">Email</span>
-            <span class="contact-card-value"><span class="__cf_email__" data-cfemail="5a1b2c3b3e326e373b231a3d373b333674393537">[email&#160;protected]</span></span>
+            <span class="contact-card-value"><span class="__cf_email__" data-cfemail="9ddcebfcf9f5a9f0fce4ddfaf0fcf4f1b3fef2f0">[email&#160;protected]</span></span>
           </div>
           <span class="contact-card-arrow">→</span>
         </a>
@@ -1456,7 +1456,7 @@
   <div class="footer-top">
     <div class="footer-brand">
       <span class="footer-logo">Avadh <span>Nagaralawala</span></span>
-      <p>Digital twin technology for rare earth extraction — where real-time sensing, process simulation, and intelligent control come together.</p>
+      <p>Digital twin technology for rare earth extraction — real-time sensing, process simulation, and intelligent control in one integrated system.</p>
     </div>
     <div class="footer-col">
       <h5>Research</h5>
@@ -1471,7 +1471,7 @@
     <div class="footer-col">
       <h5>Connect</h5>
       <ul>
-        <li><a href="/cdn-cgi/l/email-protection#9bdaedfafff3aff6fae2dbfcf6faf2f7b5f8f4f6">Email</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#f1b087909599c59c9088b1969c90989ddf929e9c">Email</a></li>
         <li><a href="https://www.linkedin.com/in/avadh4may/" target="_blank">LinkedIn</a></li>
         <li><a href="#contact">Get in Touch</a></li>
       </ul>
@@ -1480,7 +1480,7 @@
   <div class="footer-bottom">
     <p>© 2025 Avadh Nagaralawala · digital-twin.us · All rights reserved.</p>
     <div class="footer-socials">
-      <a href="/cdn-cgi/l/email-protection#5f1e293e3b376b323e261f38323e3633713c3032" class="footer-social-btn" title="Email">
+      <a href="/cdn-cgi/l/email-protection#45043324212d7128243c052228242c296b262a28" class="footer-social-btn" title="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <rect x="2" y="4" width="20" height="16" rx="2"/>
           <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
@@ -1497,9 +1497,10 @@
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Scroll to top on refresh
+  // Scroll to top on page load
   if ('scrollRestoration' in history) { history.scrollRestoration = 'manual'; }
   window.scrollTo(0, 0);
+
   // Hamburger menu
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
